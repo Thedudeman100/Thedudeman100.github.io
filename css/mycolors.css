@@ -1,7 +1,15 @@
 body {
 	background-color: #191919;
   	color: white;
+  	font-family: "Comic Sans MS";
 }
 a {
 	color: lightblue;
+}
+img{
+	border: 5px solid red;
+}
+footer{
+	padding-top: 45px;
+	padding-bottom: 45px;
 }
