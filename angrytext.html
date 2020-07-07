@@ -18,6 +18,13 @@
 			<input type="text" id= "mytext">
 		</form>
 		<script type="text/javascript">
+			let input = document.getElementById("mytext");
+			input.addEventListener("keypress", function(event) {
+				  if (event.keyCode === 13) {
+				    event.preventDefault();
+				    document.getElementById("myBtn").click();
+				  }
+			});
 			function myFunction() {
 				let str = document.getElementById("mytext").value;
 				str = str.toLowerCase();
@@ -29,9 +36,10 @@
 						ans += str[i];
 				}
 				document.getElementById("inserthere").innerHTML = ans;
+				document.getElementById("mytext").value = "";
 			}
 		</script>
-		<button type="button" onclick="myFunction()">Angerify</button>
+		<button type="button" onclick="myFunction()" id="myBtn">Angerify</button>
 		<p id="inserthere"></p>
 	</div>
 	<footer>
