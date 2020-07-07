@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Make Angry Text</title>
+	<link rel="stylesheet" href="css/mycolors.css">
+	<style type="text/css">
+		#block {
+			background-color: #252525;
+			padding: 45px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="block">
+		<form>
+			<label>Text to angerify:</label><br>
+			<input type="text" id= "mytext">
+		</form>
+		<script type="text/javascript">
+			function myFunction() {
+				let str = document.getElementById("mytext").value;
+				str = str.toLowerCase();
+				let ans = "";
+				for (var i = 0; i < str.length; i++) {
+					if(i%2 == 0)
+						ans += ("" + str[i]).toUpperCase();
+					else
+						ans += str[i];
+				}
+				document.getElementById("inserthere").innerHTML = ans;
+			}
+		</script>
+		<button type="button" onclick="myFunction()">Angerify</button>
+		<p id="inserthere"></p>
+	</div>
+	<footer>
+		<a href="index.html">Home</a>
+	</footer>
+</body>
+</html>
